@@ -1,13 +1,13 @@
-export * from "../src/errors/bad-error";
-export * from "../src/errors/custom-error";
-export * from "../src/errors/database-validation-error";
-export * from "../src/errors/not-authorize-error";
-export * from "../src/errors/not-found-error";
-export * from "../src/errors/request-validation-error";
+export * from "./errors/bad-error";
+export * from "./errors/custom-error";
+export * from "./errors/database-validation-error";
+export * from "./errors/not-authorize-error";
+export * from "./errors/not-found-error";
+export * from "./errors/request-validation-error";
 
-export * from "../src/interface/error-interface";
+export * from "./interface/error-interface";
 
-export * from "../src/middlewares/current-user";
-export * from "../src/middlewares/error-handler";
-export * from "../src/middlewares/request-handler";
-export * from "../src/middlewares/require-auth";
+export * from "./middlewares/current-user";
+export * from "./middlewares/error-handler";
+export * from "./middlewares/request-handler";
+export * from "./middlewares/require-auth";
