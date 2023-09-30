@@ -14,7 +14,9 @@ export * from "./middlewares/require-auth";
 
 export * from "./events/base-listner";
 export * from "./events/base-publisher";
-export * from "./events/ricket-created-event";
+export * from "./events/tricket-created-event";
 export * from "./events/subject";
+export * from "./events/order-created-event";
+export * from "./events/order-cancelled-event";
 
 export * from "./types/order-status";
