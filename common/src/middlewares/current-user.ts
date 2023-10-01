@@ -19,13 +19,13 @@ export const currentUser = (
   res: Response,
   next: NextFunction
 ) => {
-  if (!req.session?.jwt) {
+  if (!req.cookies?.session) {
     return next();
   }
 
   try {
     const payload = jwt.verify(
-      req.session.jwt,
+      req.cookies.session,
       process.env.JWT_KEY!
     ) as UserPayload;
     req.currentUser = payload;
