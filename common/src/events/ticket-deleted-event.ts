@@ -4,5 +4,6 @@ export interface TicketDeletedEvent {
   subject: Subjects.TicketDeleted;
   data: {
     id: string;
+    version: number;
   };
 }

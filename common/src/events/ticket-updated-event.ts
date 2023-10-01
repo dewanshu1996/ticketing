@@ -5,5 +5,6 @@ export interface TicketUpdatedEvent {
   data: {
     id: string;
     price: number;
+    version: number;
   };
 }
