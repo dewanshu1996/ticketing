@@ -19,15 +19,15 @@ export const currentUser = (
   res: Response,
   next: NextFunction
 ) => {
-  let cookie = req.headers.cookie;
-  if (!cookie) {
+  if (!req.session!.jwt) {
     return next();
   }
 
-  cookie = cookie!.slice("session=".length);
-
   try {
-    const payload = jwt.verify(cookie, process.env.JWT_KEY!) as UserPayload;
+    const payload = jwt.verify(
+      req.session!.jwt,
+      process.env.JWT_KEY!
+    ) as UserPayload;
     req.currentUser = payload;
   } catch (error) {}
   next();
