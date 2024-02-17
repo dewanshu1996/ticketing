@@ -11,7 +11,10 @@ export const errorHandler = (
 
   if (err instanceof CustomError) {
     //   res.status(err.statusCode).send({ errors: err.serializeErrors() });
-    res.status(err.statusCode).send({ errors: "erros" });
+    console.log("reached here");
+    console.log(err);
+    res.status(err.statusCode).send({ errors: err.serializeErrors() });
+    console.log("complete error handler");
   }
   // }
 
