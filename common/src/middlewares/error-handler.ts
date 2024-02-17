@@ -10,8 +10,10 @@ export const errorHandler = (
   console.log("enter error handler");
 
   if (err instanceof CustomError) {
-    res.status(err.statusCode).send({ errors: err.serializeErrors() });
+    //   res.status(err.statusCode).send({ errors: err.serializeErrors() });
+    res.status(err.statusCode).send({ errors: "erros" });
   }
+  // }
 
   res.status(500).send({ errors: [{ msg: "Server exception" }] });
 };
