@@ -1,0 +1,11 @@
+kubectl describe pod payment-depl-655f974ddf-kvwg6
+
+
+kubectl logs payment-depl-655f974ddf-kvwg6
+
+
+kubectl exec -it mypod -- /bin/bash
+
+kubectl apply -f pod.yaml
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.2/deploy/static/provider/cloud/deploy.yaml
